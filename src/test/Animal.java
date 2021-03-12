@@ -1,22 +1,56 @@
 package test;
 
 public class Animal {
-	private String espece;
-	private String nom;
-	private int age;
+	protected int taille;
+	protected int age;
+	protected String nom;
+	protected String prenom;
+	protected String espece;
 	
 	
-	public Animal (String espece, String nom, int age) {
-		this.espece = espece;
-		this.nom = nom;
+	public int getTaille() {
+		return taille;
+	}
+	public void setTaille(int taille) {
+		this.taille = taille;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
 		this.age = age;
 	}
-	public void sePresenter() {
-		System.out.println("je suis " + espece + " je m'appelle " + nom + " et j'ai " + age + " ans.");
+	
+	public String getNom() {
+		return nom;
 	}
-	public String toString() {
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	
+	public Animal(int taille, int age, String nom, String prenom, String espece) {
+		super();
+		this.taille = taille;
+		this.age = age;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.espece = espece;
+	}
+	public String getEspece() {
 		return espece;
 	}
+	public void setEspece(String espece) {
+		this.espece = espece;
+	}
+	
 	
 	
 }
